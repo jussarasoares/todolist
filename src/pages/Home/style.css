@@ -1,0 +1,20 @@
+.list__navbar {
+  background-color: #00bfff;
+  margin-bottom: 20px;
+}
+
+.list__tab,
+.list__tab:hover {
+  color: #000;
+  font-size: large;
+}
+
+.list__item {
+  text-align: right;
+}
+
+.list__button,
+.list__button:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
