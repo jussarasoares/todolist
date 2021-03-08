@@ -1,9 +1,16 @@
-import { Button, Col, Form, ListGroup, Row } from 'react-bootstrap';
-import { BsX } from 'react-icons/bs';
+import {
+  Button,
+  ButtonGroup,
+  Col,
+  Form,
+  ListGroup,
+  Row,
+} from 'react-bootstrap';
+import { BsPencilSquare, BsX } from 'react-icons/bs';
 
 const Task = ({ title }) => {
   return (
-    <ListGroup.Item>
+    <ListGroup.Item className="list__item--task">
       <Row>
         <Col>
           <Form>
@@ -11,9 +18,14 @@ const Task = ({ title }) => {
           </Form>
         </Col>
         <Col className="list__item">
-          <Button className="list__button">
-            <BsX color="black" fontSize={15} />
-          </Button>
+          <ButtonGroup>
+            <Button variant="secondary" className="list__button">
+              <BsPencilSquare color="black" fontSize={15} />
+            </Button>
+            <Button variant="secondary" className="list__button">
+              <BsX color="black" fontSize={20} />
+            </Button>
+          </ButtonGroup>
         </Col>
       </Row>
     </ListGroup.Item>

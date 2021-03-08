@@ -3,6 +3,8 @@ import {
   ButtonGroup,
   Col,
   Form,
+  FormControl,
+  InputGroup,
   ListGroup,
   Row,
 } from 'react-bootstrap';
@@ -20,16 +22,24 @@ const List = ({ title, children }) => {
           </Col>
           <Col className="list__item">
             <ButtonGroup>
-              <Button className="list__button">
+              <Button variant="outline-secondary">
                 <BsPlus color="black" fontSize={20} />
               </Button>
-              <Button className="list__button">
+              <Button variant="outline-secondary">
                 <BsTrash color="black" fontSize={15} />
               </Button>
             </ButtonGroup>
           </Col>
         </Row>
         {children}
+        <InputGroup className="list__input">
+          <FormControl placeholder="Adicione uma tarefa" />
+          <InputGroup.Append>
+            <Button variant="secondary">
+              <BsPlus fontSize={20} />
+            </Button>
+          </InputGroup.Append>
+        </InputGroup>
       </ListGroup.Item>
     </ListGroup>
   );
