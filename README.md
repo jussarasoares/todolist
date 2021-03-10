@@ -1,7 +1,5 @@
 # :clipboard: Lista de Tarefas
 
-## Teste Frontend
-
 <p>
 <img src="https://img.shields.io/badge/-React-blue">
 <img src="https://img.shields.io/badge/-JavaScript-yellow">
@@ -19,15 +17,15 @@ yarn
 yarn start
 ```
 
-## :rocket: Executar no endereço:
-
-http://localhost:3000/
-
-## Run Mock API
+## :computer: Para Rodar Mock API
 
 ```sh
 npx json-server --delay 500 db.json --port 8080
 ```
+
+## :rocket: Executar no endereço:
+
+http://localhost:3000/
 
 ## :scroll: Bibliotecas Utilizadas:
 
@@ -35,3 +33,4 @@ npx json-server --delay 500 db.json --port 8080
 - Axios;
 - React-Bootstrap;
 - React-Icons;
+- React-Toastify;
