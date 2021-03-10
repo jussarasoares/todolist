@@ -10,6 +10,7 @@ import {
   Row,
 } from 'react-bootstrap';
 import { BsCardChecklist, BsCircleFill, BsPlus } from 'react-icons/bs';
+import { toast } from 'react-toastify';
 import List from '../../components/List';
 import Task from '../../components/Task';
 import {
@@ -31,7 +32,7 @@ const Home = () => {
     const exec = async () => {
       const { data, error } = await getAllLists();
       if (error) {
-        console.log('Mensagem de error');
+        toast.error('Mensagem de error');
         setLoading(false);
         return;
       }
@@ -55,7 +56,7 @@ const Home = () => {
   const onCreateList = async () => {
     const { data, error } = await createList(list);
     if (error) {
-      console.log('Mensagem de error');
+      toast.error('Falha ao criar a lista.');
       return;
     }
     setLists((state) => {
@@ -63,34 +64,33 @@ const Home = () => {
       return [...state];
     });
     setList('');
-    console.log('Mensagem de sucesso');
+    toast.success('Lista criada com sucesso.');
   };
 
   const onEditList = async (values) => {
     const { data, error } = await updateList(values);
-    console.log('UpData??', data);
     if (error) {
-      console.log('Mensagem de error');
+      toast.error('Falha ao atualizar a lista.');
       return;
     }
     setLists((state) => state.map((s) => (s.id === data.id ? data : s)));
-    console.log('Mensagem de sucesso');
+    toast.success('Lista atualizada com sucesso.');
   };
 
   const onDeleteList = async (id) => {
     const { error } = await deleteList(id);
     if (error) {
-      console.log('Mensagem de error');
+      toast.error('Falha ao deletar a lista.');
       return;
     }
     setLists((state) => state.filter((item) => item.id !== id));
-    console.log('Mensagem de sucesso');
+    toast.success('Lista deletada com sucesso.');
   };
 
   const onCreateTask = async (values) => {
     const { data, error } = await createTask(values);
     if (error) {
-      console.log('Mensagem de error');
+      toast.error('Falha ao criar a tarefa.');
       return;
     }
     setLists((state) =>
@@ -103,13 +103,13 @@ const Home = () => {
         return s;
       })
     );
-    console.log('Mensagem de sucesso');
+    toast.success('Tarefa criada com sucesso.');
   };
 
   const onEditTask = async (values) => {
     const { data, error } = await updateTask(values);
     if (error) {
-      console.log('Mensagem de error');
+      toast.error('Falha ao atualizar a tarefa.');
       return;
     }
     setLists((state) =>
@@ -123,13 +123,13 @@ const Home = () => {
         return s;
       })
     );
-    console.log('Mensagem de sucesso');
+    toast.success('Tarefa atualizada com sucesso.');
   };
 
   const onDeleteTask = async (id) => {
     const { error } = await deleteTask(id);
     if (error) {
-      console.log('Mensagem de error');
+      toast.error('Falha ao deletar a tarefa.');
       return;
     }
     setLists((state) =>
@@ -138,7 +138,7 @@ const Home = () => {
         return { ...s, tasks };
       })
     );
-    console.log('Mensagem de sucesso');
+    toast.success('Tarefa deletada com sucesso.');
   };
 
   return (
