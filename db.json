@@ -1,0 +1,34 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "title": "Mercado",
+      "done": false
+    },
+    {
+      "id": 2,
+      "title": "Trabalho",
+      "done": true
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "listId": 1,
+      "title": "Comprar arroz",
+      "done": false
+    },
+    {
+      "id": 2,
+      "listId": 1,
+      "title": "Comprar feijão",
+      "done": false
+    },
+    {
+      "id": 3,
+      "listId": 2,
+      "title": "Reunião às 11:00",
+      "done": true
+    }
+  ]
+}

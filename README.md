@@ -23,6 +23,12 @@ yarn start
 
 http://localhost:3000/
 
+## Run Mock API
+
+```sh
+npx json-server --delay 500 db.json --port 8080
+```
+
 ## :scroll: Bibliotecas Utilizadas:
 
 - React-Router-DOM;
