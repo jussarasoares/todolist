@@ -1,50 +1,32 @@
-.list__navbar {
+.home__navbar {
   background-color: #e6e4e4;
   margin-bottom: 20px;
 }
 
-.list__navbar--icon {
+.home__navbar--icon {
   margin: 5px;
 }
 
-.list__input {
+.home__input--list {
   margin-bottom: 10px;
 }
 
-.list__icon {
-  margin-left: 10px;
-}
-
-.list__icon--active {
+.home__icon--active {
   margin-right: 10px;
   color: green;
 }
 
-.list__icon--completed {
+.home__icon--completed {
   margin-right: 10px;
   color: red;
 }
 
-.list__tab,
-.list__tab:hover {
+.home__tab,
+.home__tab:hover {
   color: #000;
   font-size: large;
 }
 
-.list__item {
-  text-align: right;
-}
-
-.list__item--task {
-  margin-top: 20px;
-}
-
-.list__button,
-.list__button:hover {
-  background-color: transparent;
-  border-color: transparent;
-}
-
-.list__button--delete {
-  margin-top: 30px;
+.home__tab--active {
+  background-color: #e6e4e4;
 }

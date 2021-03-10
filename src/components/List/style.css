@@ -1,0 +1,12 @@
+.list__input {
+  margin-bottom: 10px;
+}
+
+.list__item {
+  text-align: right;
+}
+
+.list__done {
+  color: #bebebe;
+  text-decoration: line-through;
+}

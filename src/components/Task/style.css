@@ -1,0 +1,22 @@
+.task__container {
+  margin-top: 20px;
+}
+
+.task__input {
+  margin-bottom: 10px;
+}
+
+.task__done label {
+  color: #bebebe;
+  text-decoration: line-through;
+}
+
+.task__item {
+  text-align: right;
+}
+
+.task__button,
+.task__button:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
